@@ -5,8 +5,14 @@
 
 header{
     display: flex;
-    justify-content: space-evenly;
-    background-color: red;
+    justify-content: space-between;
+    background-color: orangered;
+    height: 50px
+}
+
+header .logo{
+    font-size: 40px;
+    font-family: "Jersey 15", serif;
 }
 
 header .nav nav ul{
@@ -29,4 +35,14 @@ header .nav nav ul a{
 header .nav nav ul a:hover{
     background-color: black;
     color: white;
+}
+
+header .search_bar{
+    margin-top: 10px;
+}
+
+header .search_bar input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
 }
