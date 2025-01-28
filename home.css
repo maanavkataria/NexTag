@@ -51,3 +51,64 @@ header .search_bar input{
     border-radius: 10px;
     border: none;
 }
+
+.banner .banner_img img{
+    width: 100%;
+    height: 500px;
+}
+
+.categories_section h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Kavivanar";
+    font-size: 50px;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.categories .category{
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.categories .category img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.categories .category .category_text h2{
+    font-family: "Roboto Slab";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.categories .category .category_text p{
+    font-family: "Dancing Script";
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.categories .category .category_text a{
+    padding: 7px 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+}
