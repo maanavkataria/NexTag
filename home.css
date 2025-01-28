@@ -3,16 +3,23 @@
     padding: 0;
 }
 
+.header{
+    background-color: black;
+}
+
 header{
     display: flex;
     justify-content: space-between;
-    background-color: orangered;
-    height: 50px
+    height: 50px;
+    width: 80%;
+    margin: auto;
 }
 
 header .logo{
     font-size: 40px;
-    font-family: "Jersey 15", serif;
+    font-family: "Dancing Script";
+    margin-top: 0px;
+    color: white;
 }
 
 header .nav nav ul{
@@ -21,20 +28,18 @@ header .nav nav ul{
     list-style: none;
 }
 
-header .nav nav ul li{
-    margin: 0 10px;
-}
-
 header .nav nav ul a{
     text-decoration: none;
     color: black;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 10px;
+    color: white;
+    margin-top: 10px;
 }
 
 header .nav nav ul a:hover{
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 header .search_bar{
