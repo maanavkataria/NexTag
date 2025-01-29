@@ -149,3 +149,20 @@ footer{
     text-align: center;
     padding: 10px 0px;
 }
+
+/* Utility Classes */
+.h-primary{
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Playfair Display";
+}
+
+.h-secondary{
+    font-size: 20px;
+    font-weight: 900;
+    font-family: "Merriweather", serif;
+}
+
+.text-center{
+    text-align: center;
+}
