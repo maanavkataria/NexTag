@@ -122,6 +122,8 @@ header .search_bar input{
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
+    width: 90%;
+    margin: auto;
 }
 
 .team_members .team_member{

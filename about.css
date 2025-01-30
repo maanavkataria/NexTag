@@ -14,7 +14,7 @@
     margin-bottom: 20px;
 }
 
-p{
+#about p, #vision p, #team p{
     font-size: 20px;
     font-family: "Ubuntu";
     margin-top: 10px;
