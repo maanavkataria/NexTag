@@ -1,11 +1,73 @@
-.about_page hr{
-    width: 90%;
-    margin: auto;
-    border: 2.5px solid black;
-    border-style: dashed;
-}
+ /* body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     /* background-color: #d3d3d3; */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: auto;
+ } */
 
-#about, #vision, #team{
+ .about-container {
+     width: 50%;
+     /* background-color: #f5deb3; */
+     padding: 20px;/ border-radius: 8px;
+     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+     overflow-y: auto;
+ }
+
+
+ h1 {
+     color: #333;
+     text-align: center;
+     margin-bottom: 30px;
+ }
+
+ h2,
+ h3 {
+     color: #333;
+     text-align: center;
+ }
+
+section p {
+     font-size: 16px;
+     line-height: 1.6;
+     margin-bottom: 20px;
+     color: #555;
+ }
+
+ ul {
+     list-style-type: none;
+     padding-left: 0;
+ }
+
+ ul li {
+     margin-bottom: 15px;
+ }
+
+ /* blockquote {
+     font-style: italic;
+     border-left: 4px solid #ccc;
+     padding-left: 16px;
+     margin-left: 0;
+     color: #777;
+ } */
+
+ /* @media (max-width: 768px) {
+     .about-container {
+         width: 90%;
+     }
+ } */
+
+ .about_page hr {
+     width: 90%;
+     margin: auto;
+     border: 2.5px solid black;
+     border-style: dashed;
+ }
+
+ /*  #about, #vision, #team{
     box-shadow: 0px 0px 10px 0px;
     border-radius: 10px;
     width: 90%;
@@ -19,4 +81,4 @@
     font-family: "Ubuntu";
     margin-top: 10px;
     padding-bottom: 20px;
-}
+} */
