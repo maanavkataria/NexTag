@@ -1,8 +1,14 @@
+.contact>hr{
+    border: 2.5px solid black;
+    border-style: dashed;
+    width: 90%;
+    margin: auto;
+}
+
 .contact_content{
     display: flex;
     justify-content: space-evenly;
 }
-
 
 .contact_form{
     width: 50%;
