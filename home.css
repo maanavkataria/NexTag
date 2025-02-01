@@ -109,40 +109,6 @@ nav ul li a {
     background-color: #575757;
 }
 
-/* .team h1{
-    text-align: center;
-    margin-top: 20px;
-    font-family: "Kavivanar";
-    font-size: 50px;
-}
-
-.team_members{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-    width: 90%;
-    margin: auto;
-}
-
-.team_members .team_member{
-    width: 20%;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.team_members .team_member:hover img{
-    box-shadow: 0px 0px 10px 0px blue;
-}
-
-.team_members .team_social a{
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-} */
-
 footer{
     background-color: black;
     color: white;
@@ -167,7 +133,6 @@ footer{
     transform: scale(0.5);
     transform: scale(1.1);
     box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2); 
-      
 }
 
 h3{
@@ -212,14 +177,14 @@ button:hover {
     transform: scale(0.9);
 }
 
-.products_section hr, .brands_association hr {
+.products_section hr, .collab hr{
     width: 90%;
     margin: auto;
     border: 2.5px solid black;
     border-style: dashed;
 }
 
-.brands_association .brands{
+.collab .brand{
     display: flex;
     justify-content: space-evenly;
 }
