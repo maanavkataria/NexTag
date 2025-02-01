@@ -186,10 +186,6 @@ button:hover {
     height: 120px;
 }
 
-.brands a{
-    text-decoration: none;
-}
-
 .brands p{
     font-family: "Ubuntu";
     margin-top: 5px;
