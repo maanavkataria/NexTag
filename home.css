@@ -4,7 +4,7 @@
     }
     
     .header{
-    background-color: black;
+    background-color: #060606;
     }
     
     header{
@@ -30,7 +30,7 @@
     
     header .nav nav ul a{
     text-decoration: none;
-    color: black;
+    color: #060606;
     padding: 5px 10px;
     border-radius: 10px;
     color: white;
@@ -39,7 +39,7 @@
     
     header .nav nav ul a:hover{
     background-color: white;
-    color: black;
+    color: #060606;
     }
     
     header .search_bar{
