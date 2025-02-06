@@ -10,7 +10,7 @@
     header{
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 60px;
     width: 80%;
     margin: auto;
     }
@@ -18,7 +18,7 @@
     header .logo{
     font-size: 40px;
     font-family: "Dancing Script";
-    margin-top: 0px;
+    margin-top: 5px;
     color: white;
     }
     
@@ -43,7 +43,7 @@
     }
     
     header .search_bar{
-    margin-top: 10px;
+    margin-top: 15px;
     }
     
     header .search_bar input{
