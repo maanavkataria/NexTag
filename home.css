@@ -180,6 +180,7 @@
     background-color: black;
     transition: transform 1s ease;
     cursor: pointer;
+    border-radius: 20px;
     }
     
     button:hover {
