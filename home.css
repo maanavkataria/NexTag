@@ -6,12 +6,34 @@
     .header{
     background-color: #060606;
     }
+
+    .login_register{
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+    }
+
+    .login_register a{
+        text-decoration: none;
+        color: black;
+        margin-left: 20px;
+    }
+
+    .login_register a button{
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-style: "Merriweather";
+        width: auto;
+    }
     
     header{
     display: flex;
     justify-content: space-between;
     height: 60px;
-    width: 80%;
+    width: 90%;
     margin: auto;
     }
     
@@ -47,7 +69,7 @@
     }
     
     header .search_bar input{
-    padding: 8px;
+    padding: 5px;
     border-radius: 10px;
     border: none;
     }
