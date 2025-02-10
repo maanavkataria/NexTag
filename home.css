@@ -1,14 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    }
-
-    @media (max-width: 768px) {
-        /* Styles for devices with a width up to 768px */
-        .container {
-          flex-direction: column;
-        }
-      }      
+    }   
     
     .header{
     background-color: #060606;
