@@ -78,6 +78,35 @@
     width: 100%;
     height: 500px;
     }
+
+    .text-container {
+        background-color: WHITE;
+        color: black;
+        padding: 10px;
+        font-size: 28px;
+        font-family: "Roboto", sans-serif;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* The actual text moving in the ticker */
+    .texter {
+        display: inline-block;
+        animation: ticker-scroll 20s linear infinite;
+    }
+    
+    /* Animation to scroll the text */
+    @keyframes ticker-scroll {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
     
     nav {
     background-color: black;
