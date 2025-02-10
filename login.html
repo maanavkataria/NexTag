@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h1>Login</h1>
+            <br>
+            <hr>
+            <br>
+            <label>Name:</label><input type="text" placeholder="Enter your Name" required id="name">
+            <br><br>
+            <label>Password:</label><input type="password" placeholder="Enter your Password" required id="password">
+            <br><br><br>
+            <input type="button" value="Login" onclick="signin()">
+        </form>
+
+        <script>
+            function signin() {
+                var name = document.getElementById("name").value;
+                var password = document.getElementById("password").value;
+
+                var name_storage = localStorage.getItem("Name")
+                var password_storage = localStorage.getItem("Password")
+
+                sessionStorage.setItem("User", name_storage);
+                if (name == name_storage && password == password_storage) {
+                    location.assign("/Higher Diploma Software Engineering - HDSE/CPISM/All Coding/eProjects/First Project/index.html")
+                    alert("Login Successful")
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
