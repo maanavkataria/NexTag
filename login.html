@@ -1,40 +1,154 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signin | NexTag</title>
-    <link rel="stylesheet" href="login.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - NEXTAG</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        } */
+        body{
+            background-color: whitesmoke;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-left:35% ;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        footer{
+            margin-top: 23.5%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <form>
-            <h1>Login</h1>
-            <br>
-            <hr>
-            <br>
-            <label>Name:</label><input type="text" placeholder="Enter your Name" required id="name">
-            <br><br>
-            <label>Password:</label><input type="password" placeholder="Enter your Password" required id="password">
-            <br><br><br>
-            <input type="button" value="Login" onclick="signin()">
+        <div class="header">
+            <header>
+                <div class="logo">
+                    <h4>NexTag</h4>
+                </div>
+                <div class="nav">
+                    <nav>
+                        <ul>
+                            <a href="index.html">
+                                <li>Home</li>
+                            </a>
+                            <a href="about.html">
+                                <li>About Us</li>
+                            </a>
+                            <li class="dropdown">
+                                <a href="#">Categories</a>
+                                <div class="dropdown-content">
+                                    <a href="male.html">Male</a>
+                                    <a href="female.html">Female</a>
+                                </div>
+                            </li>
+                            <a href="contact.html">
+                                <li>Contact</li>
+                            </a>
+                            <li class="dropdown">
+                                <a href="#">Shop By Brands</a>
+                                <div class="dropdown-content">
+                                    <a href="lv.html">Louis Vitton</a>
+                                    <a href="gucci.html">Gucci</a>
+                                    <a href="prada.html">Prada</a>
+                                    <a href="michael_kors.html">Michael Kors</a>
+                                    <a href="balenciaga.html">Balenciaga</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- <div class="hamburger" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div> -->
+                </div>
+                <div class="login_register">
+                    <a href="login.html">
+                        <button>Login</button>
+                    </a>
+                    <a href="register.html">
+                        <button>Register</button>
+                    </a>
+                </div>
+                <div class="search_bar">
+                    <input type="text" placeholder="Search">
+                    <i class="fa fa-search" style="font-size: 24px; color: white;"></i>
+                </div>
+            </header>
+        </div>
+        <br><br><br><br><br><br><br>
+    <div class="login-container">
+        <h2>Login to Your Account</h2>
+
+        <form action="#" method="POST">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Login</button>
+
+            <p><a href="#" class="forgot-password">Forgot Password?</a></p>
         </form>
-
-        <script>
-            function signin() {
-                var name = document.getElementById("name").value;
-                var password = document.getElementById("password").value;
-
-                var name_storage = localStorage.getItem("Name")
-                var password_storage = localStorage.getItem("Password")
-
-                sessionStorage.setItem("User", name_storage);
-                if (name == name_storage && password == password_storage) {
-                    alert("Login Successful")
-                    location.assign("index.html")
-                }
-            }
-        </script>
     </div>
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2025 NexTag. All Rights Reserved. Desgined by <strong>Team NexTag</strong> for 🇵🇰.</p>
+        </div>
+    </footer>
 </body>
 </html>
