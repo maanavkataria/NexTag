@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | NexTag</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+15&family=Kavivanar&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Sixtyfour+Convergence&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <header>
+                <div class="logo">
+                    <h4>NexTag</h4>
+                </div>
+                <div class="nav">
+                    <nav>
+                        <ul>
+                            <a href="index.html">
+                                <li>Home</li>
+                            </a>
+                            <a href="about.html">
+                                <li>About Us</li>
+                            </a>
+                            <li class="dropdown">
+                                <a href="#">Categories</a>
+                                <div class="dropdown-content">
+                                    <a href="male.html">Male</a>
+                                    <a href="female.html">Female</a>
+                                </div>
+                            </li>
+                            <a href="contact.html">
+                                <li>Contact</li>
+                            </a>
+                            <li class="dropdown">
+                                <a href="#">Shop By Brands</a>
+                                <div class="dropdown-content">
+                                    <a href="lv.html">Louis Vitton</a>
+                                    <a href="gucci.html">Gucci</a>
+                                    <a href="prada.html">Prada</a>
+                                    <a href="michael_kors.html">Michael Kors</a>
+                                    <a href="balenciaga.html">Balenciaga</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- <div class="hamburger" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div> -->
+                </div>
+                <div class="login_register">
+                    <a href="login.html">
+                        <button>Login</button>
+                    </a>
+                    <a href="register.html">
+                        <button>Register</button>
+                    </a>
+                </div>
+                <div class="search_bar">
+                    <input type="text" placeholder="Search">
+                    <i class="fa fa-search" style="font-size: 24px; color: white;"></i>
+                </div>
+            </header>
+        </div>
+
+        <section class="products_section">
+            <h1 class="h-primary text-center">Our Products</h1>
+            <hr><br><br>
+            <div class="cart-container">
+                <div class="cart-icon">
+                    <span id="cart-count">0</span>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <!-- LV -->
+             <h1 class="h-extra text-center" style="margin-bottom: 20px;">꧁༒༺ Louis Vuitton ༻༒꧂</h1>
+            <div class="products">
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-pochette-camille--M13566_PM2_Front%20view.png?wid=730&hei=730"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>M13566 Pochette Camille</H5>
+                    <br>
+                    <center>
+                        <span><del>$490.00</del> <b>$450.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-wallet-on-chain-rosy--M13569_PM2_Front%20view.png?wid=490&hei=490"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>Wallet On Chain Rosy</H5>
+                    <br>
+                    <center>
+                        <span><del>$1,970.00</del> <b>$1,584.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-all-in-gm--M12926_PM1_Back%20view.png?wid=730&hei=730"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>All In GM</h5>
+                    <br>
+                    <center>
+                        <span><del>$2,710.00</del> <b>$2,168.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-boulogne--M12930_PM2_Front%20view.png?wid=490&hei=490"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>Boulogne</h5>
+                    <br>
+                    <center>
+                        <span><del>$2,890.00</del> <b>$2,312.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+            <div class="products">
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://www.louisvuitton.com/images/is/image/lv/M61695_PM2_Front%20view.png?wid=490&hei=490"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>M62294 Slender Wallet</H5>
+                    <br>
+                    <center>
+                        <span><del>$490.00</del> <b>$450.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-multiple-wallet--N00142_PM2_Front%20view.png?wid=730&hei=730"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>N00142 Multiple Wallet</H5>
+                    <br>
+                    <center>
+                        <span><del>$2,890.00</del> <b>$2,312.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-brazza-wallet--N62665_PM2_Front%20view.png?wid=730&hei=730"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>N62665 Customizable Brazza Wallet</H5>
+                    <br>
+                    <center>
+                        <span><del>$2,890.00</del> <b>$2,312.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-zippy-wallet-horizontal--M12578_PM2_Front%20view.png?wid=730&hei=730"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>M12578 Zippy Wallet Horizontal</H5>
+                    <br>
+                    <center>
+                        <span><del>$2,890.00</del> <b>$2,312.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+
+            <!-- Gucci -->
+             <h1 class="h-extra text-center" style="margin-bottom: 20px;">꧁༒༺ Gucci ༻༒꧂</h1>
+            <div class="products">
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1694503908/771148_AABXM_1000_001_080_0000_Light-Bi-fold-wallet-with-Gucci-logo.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>BI-FOLD WALLET WITH GUCCI LOGO</H5>
+                    <br>
+                    <center>
+                        <span><del>$1120.00</del> <b>$560.00</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1695141980/771159_AABXM_1000_001_080_0000_Light-Long-card-case-with-Gucci-logo.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>LONG CARD CASE WITH GUCCI LOGO</H5>
+                    <br>
+                    <center>
+                        <span><del>$920.00</del> <b>$460.00</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1731056406/821217_FAED4_1000_001_080_0016_Light-GG-Emblem-super-mini-bag.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>GG EMBLEM SUPER MINI BAG</h5>
+                    <br>
+                    <center>
+                        <span><del>$3,900.00</del> <b>$1,950.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1712253713/795286_AABXM_1000_001_090_0000_Light-Coin-wallet-with-Gucci-logo.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>COIN WALLET WITH GUCCI LOGO</h5>
+                    <br>
+                    <center>
+                        <span><del>$1,100.00</del> <b>$550.00</b></span>
+                        <br>
+                        <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+            <div class="products">
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/White_South_0_160_316x316/1734631256/815213_FAD6L_8459_001_100_0000_Light-GG-Emblem-medium-tote-bag.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>GG Emblem medium <br> tote bag</H5>
+                    <br>
+                    <center>
+                        <span><del>$3,350.00</del> <b>$2,680.00</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/White_South_0_160_316x316/1719508503/815205_AAEC2_6207_001_071_0000_Light-Gucci-Horsebit-1955-Soft-mini-shoulder-bag.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>Gucci Horsebit 1955 Soft
+                        <br> mini shoulder bag
+                    </H5>
+                    <br>
+                    <center>
+                        <span><del>$3,350.00</del> <b>$2,680.00</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/White_South_0_160_316x316/1517399105/447632_DTD1T_1000_001_067_0038_Light-GG-Marmont-small-shoulder-bag.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>GG Marmont small shoulder <br> bag
+                    </h5>
+                    <br>
+                    <center>
+                        <span><del>$1,950.00</del> <b>$1,560.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>50% off</h3>
+                    <img src="https://media.gucci.com/style/White_South_0_160_316x316/1726069555/815212_FAD6L_9758_001_100_0000_Light-GG-Emblem-large-tote-bag.jpg"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>GG Emblem large tote <br> bag</h5>
+                    <br>
+                    <center>
+                        <span><del>$2,490.00</del> <b>$1,992.00</b></span>
+                        <br>
+                        <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+
+            <!-- Prada -->
+             <h1 class="h-extra text-center" style="margin-bottom: 20px;">꧁༒༺ Prada ༻༒꧂</h1>
+            <div class="products">
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="Prada.png" alt="" style="width:100%; height: 300px;">
+                    <H5>Prada Wallet</H5>
+                    <br>
+                    <center>
+                        <span><del>£1,950.30</del> <b>£1,657.755</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="prada_1.png" alt="" style="width:100%; height: 300px;">
+                    <H5>Leather Wallet with Chain</H5>
+                    <br>
+                    <center>
+                        <span><del>£1,871.50</del> <b>£1,590.776</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="prada_w.png" alt="" style="width:100%; height: 300px;">
+                    <h5>Re-Nylon and leather wallet</h5>
+                    <br>
+                    <center>
+                        <span><del>£738.80</del> <b>£625.43</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="wa_prada.png" alt="" style="width:100%; height: 300px;">
+                    <h5>Leather Smartphone Case</h5>
+                    <br>
+                    <center>
+                        <span><del>£506.30</del> <b>£430.355</b></span>
+                        <br>
+                        <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+            <div class="products">
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="https://statics-cdn-v2.fashionette.net/transform/883bdc3a-a893-45bb-a93d-97b041426687/A0223130-Prada-1?io=transform:extend,width:504,height:504,background:white&quality=100"
+                        alt="" style="width:100%; height: 300px;">
+                    <H5>Prada Crossbody <br> Bag Black</H5>
+                    <br>
+                    <center>
+                        <span><del>£1,950.30</del> <b>£1,657.755</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="https://statics-cdn-v2.fashionette.net/transform/9fc45489-9247-4037-a083-fa84f2e78509/A0392424-PDP-1?io=transform:extend,width:230,height:230,background:white&quality=100&format=webp"
+                        alt="" style="width:100%; height: 300px;">
+                    <H5>Prada Nappa Soft Mini <br> Bag Fiordaliso</H5>
+                    <br>
+                    <center>
+                        <span><del>£1,871.50</del> <b>£1,590.776</b></span>
+                        <br> <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="fmpr.png" alt="" style="width:100%; height: 300px;">
+                    <h5>Leather Pouch</h5>
+                    <br>
+                    <center>
+                        <span><del>£738.80</del> <b>£625.43</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>15% off</h3>
+                    <img src="fempr.png" alt="" style="width:100%; height: 300px;">
+                    <h5>Small Saffiano Leather Wallet</h5>
+                    <br>
+                    <center>
+                        <span><del>£506.30</del> <b>£430.355</b></span>
+                        <br>
+                        <br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+
+            <!-- MK -->
+             <h1 class="h-extra text-center" style="margin-bottom: 20px;">꧁༒༺ Michael Kors ༻༒꧂</h1>
+            <div class="products">
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/39S4LHUF2B-2068_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <H5>Hudson Signature Logo Billfold Wallet</H5>
+                    <br>
+                    <center>
+                        <span><del>$160.00</del> <b>$128.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/39H3LGFE6L-0230_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <H5>Hudson Pebbled Leather Tri-Fold Wallet</H5>
+                    <br>
+                    <center>
+                        <span><del>$172.50</del> <b>$138.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/39F4LHDD0O-3223_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <h5>Hudson Pebbled Leather Billfold Wallet</h5>
+                    <br>
+                    <center>
+                        <span><del>$160.00</del> <b>$128.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/39F9LGYF3B-0001_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <h5>Greyson Logo Billfold Wallet With Coin Pocket</h5>
+                    <br>
+                    <center>
+                        <span><del>$172.50</del> <b>$138.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+            <div class="products">
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/32R5SJ6W4B-8120_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <H5>Jet Set Large Signature Logo Wristlet</H5>
+                    <br>
+                    <center>
+                        <span><del>$160.00</del> <b>$128.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/32S5SYTP1L-1999_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <H5>Bryant Medium Pebbled Leather Wallet</H5>
+                    <br>
+                    <center>
+                        <span><del>$160.00</del> <b>$128.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/32F4T9JD7L-0001_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <h5>Bryant Medium Pebbled Leather Wallet</h5>
+                    <br>
+                    <center>
+                        <span><del>$322.50</del> <b>$258.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://michaelkors.scene7.com/is/image/MichaelKors/32R5SY5E8L-1999_1?$large$" alt=""
+                        style="width: 100%; height: 300px;">
+                    <h5>Nolita Medium Pebbled Leather Tri-Fold Wallet</h5>
+                    <br>
+                    <center>
+                        <span><del>$197.50</del> <b>$158.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+
+            <!-- Balenciaga -->
+             <h1 class="h-extra text-center" style="margin-bottom: 20px;">꧁༒༺ Balenciaga ༻༒꧂</h1>
+            <div class="products">
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/231ba8064997b736/Medium-5945491IZI31090_F.jpg?v=6"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>MEN'S CASH SQUARE FOLDED WALLET</H5>
+                    <br>
+                    <center>
+                        <span><del>$490.00</del> <b>$450.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/4fe259e97dbfc5ea/Medium-5945492AA931000_F.jpg?v=3"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>MEN'S CASH SQUARE FOLDED WALLET</H5>
+                    <br>
+                    <center>
+                        <span><del>$1,970.00</del> <b>$1,584.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/3fba6d38ea507ee0/Medium-6815791IZI31090_F.jpg?v=6"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>MEN'S CASH VERTICAL BIFOLDED WALLET</h5>
+                    <br>
+                    <center>
+                        <span><del>$2,710.00</del> <b>$2,168.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/7052e2da9e10d08d/Medium-7852972ABFZ9862_F.jpg?v=1"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>MEN'S SUPERBUSY MESSENGER BAG USED EFFECT</h5>
+                    <br>
+                    <center>
+                        <span><del>$2,890.00</del> <b>$2,312.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+            <div class="products">
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/173c7e93ee17ca4c/Medium-7897722AA4V1000_F.jpg?v=6"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>WOMEN'S RODEO MEDIUM HANDBAG</H5>
+                    <br>
+                    <center>
+                        <span><del>$490.00</del> <b>$450.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/1ed210580bc909c6/Medium-6713092ABMW1000_F.jpg?v=1"
+                        alt="" style="width: 100%; height: 300px;">
+                    <H5>WOMEN'S LE CAGOLE XS SHOULDER BAG WITH PINS</H5>
+                    <br>
+                    <center>
+                        <span><del>$1,970.00</del> <b>$1,584.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/2f67429ef87ef2a8/Medium-8110182ABAV2621_F.jpg?v=1"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>WOMEN'S BEL AIR SMALL HOBO BAG</h5>
+                    <br>
+                    <center>
+                        <span><del>$2,710.00</del> <b>$2,168.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+                <div class="card">
+                    <h3>20% off</h3>
+                    <img src="https://balenciaga.dam.kering.com/m/1e5b450911f732e4/Medium-8194292ABKX1000_F.jpg?v=1"
+                        alt="" style="width: 100%; height: 300px;">
+                    <h5>WOMEN'S RODEO NANO BAG WITH CHAIN</h5>
+                    <br>
+                    <center>
+                        <span><del>$2,890.00</del> <b>$2,312.00</b></span>
+                        <br><br>
+                        <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    </center>
+                </div>
+            </div>
+            <br><br>
+        </section>
+
+        <footer>
+            <div class="copyright">
+                <p>&copy; 2025 NexTag. All Rights Reserved. Desgined by <strong>Team NexTag</strong> for 🇵🇰.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
