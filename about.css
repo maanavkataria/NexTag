@@ -106,13 +106,14 @@ section p {
 
 .team_member_img img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     display: block;
     transition: transform 0.3s ease;
 }
 
 .team_member:hover .team_member_img img {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .team_member_text {
