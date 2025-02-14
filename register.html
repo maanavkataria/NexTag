@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register - NexTag</title>
+    <title>Register | NexTag</title>
     <link rel="stylesheet" href="home.css">
     <style>
         body {
@@ -166,36 +166,33 @@
     </div>
 
     <script>
-        // Sample data for testing
-        const testUsername = "tahamagsi14";
-        const testEmail = "tahakhalil116@gmail.com";
-        const testPassword = "taha2005";
-        const testConfirmPassword = "taha2005";
-
-        // Form validation function
         function validateForm() {
-            var username = document.getElementById('username').value;
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            var confirmPassword = document.getElementById('confirm-password').value;
-
-            // Check if username, email, password, and confirm password match
-            if (username !== testUsername || email !== testEmail || password !== testPassword || confirmPassword !== testConfirmPassword) {
-                document.getElementById('errorMessage').style.display = 'block';
-                document.getElementById('successMessage').style.display = 'none';
-                return false;  // Prevent form submission if validation fails
-            }
-
-            // Check if the passwords match
+            let username = document.getElementById("username").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+            let successMessage = document.getElementById("successMessage");
+            let errorMessage = document.getElementById("errorMessage");
+            
             if (password !== confirmPassword) {
-                alert("Passwords do not match!");
-                return false;  // Prevent form submission if passwords do not match
+                errorMessage.style.display = "block";
+                errorMessage.innerHTML = "<h3>Error!</h3><p>Passwords do not match.</p>";
+                return false;
             }
-
-            // If all conditions are met, display success message
-            document.getElementById('successMessage').style.display = 'block';
-            document.getElementById('errorMessage').style.display = 'none';
-            return false;  // Prevent form submission for this demo (remove if you want to submit the form)
+            
+            // Store user data in Local Storage
+            let user = { username, email, password };
+            localStorage.setItem("user", JSON.stringify(user));
+            
+            successMessage.style.display = "block";
+            errorMessage.style.display = "none";
+            
+            // Redirect to login.html after 2 seconds
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 2000);
+            
+            return false;
         }
     </script>
 </body>
