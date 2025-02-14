@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+15&family=Kavivanar&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Sixtyfour+Convergence&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
@@ -73,13 +74,23 @@
                 style="width: 100%;">
         </div>
         <br>
-        <div class="cart-container">
+        <div class="cart-container" onclick="viewCart()">
             <div class="cart-icon">
                 <span id="cart-count">0</span>
                 <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
-        <div class="row">
+        <div id="cart-page" class="cart-page" style="display: none;">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="empty-cart" id="empty-message" style="display: none;">
+                <p>Your cart is empty</p>
+                <button class="btn" onclick="continueShopping()">Continue Shopping</button>
+            </div>
+            <button class="btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+
+        <div class="products">
             <div class="card">
                 <h3>50% off</h3>
                 <img src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1694503908/771148_AABXM_1000_001_080_0000_Light-Bi-fold-wallet-with-Gucci-logo.jpg"
@@ -89,7 +100,7 @@
                 <center>
                     <span><del>$1120.00</del> <b>$560.00</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('BI-FOLD WALLET WITH GUCCI LOGO', 560.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
             <div class="card">
@@ -101,7 +112,7 @@
                 <center>
                     <span><del>$920.00</del> <b>$460.00</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('LONG CARD CASE WITH GUCCI LOGO', 460.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
 
@@ -114,7 +125,7 @@
                 <center>
                     <span><del>$3,900.00</del> <b>$1,950.00</b></span>
                     <br><br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('GG EMBLEM SUPER MINI BAG', 1950.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
             <div class="card">
@@ -127,12 +138,12 @@
                     <span><del>$1,100.00</del> <b>$550.00</b></span>
                     <br>
                     <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('COIN WALLET WITH GUCCI LOGO', 550.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
         </div>
         <br><br>
-        <div class="row">
+        <div class="products">
             <div class="card">
                 <h3>50% off</h3>
                 <img src="https://media.gucci.com/style/White_South_0_160_316x316/1734631256/815213_FAD6L_8459_001_100_0000_Light-GG-Emblem-medium-tote-bag.jpg"
@@ -142,21 +153,19 @@
                 <center>
                     <span><del>$3,350.00</del> <b>$2,680.00</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('GG Emblem medium tote bag', 2680.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
             <div class="card">
                 <h3>50% off</h3>
                 <img src="https://media.gucci.com/style/White_South_0_160_316x316/1719508503/815205_AAEC2_6207_001_071_0000_Light-Gucci-Horsebit-1955-Soft-mini-shoulder-bag.jpg"
                     alt="" style="width: 100%; height: 300px;">
-                <H5>Gucci Horsebit 1955 Soft
-                    <br> mini shoulder bag
-                </H5>
+                <H5>Gucci Horsebit 1955 Soft <br> mini shoulder bag</H5>
                 <br>
                 <center>
                     <span><del>$3,350.00</del> <b>$2,680.00</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('Gucci Horsebelt 1955 Soft mini shoulder bag', 2680.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
 
@@ -164,13 +173,12 @@
                 <h3>50% off</h3>
                 <img src="https://media.gucci.com/style/White_South_0_160_316x316/1517399105/447632_DTD1T_1000_001_067_0038_Light-GG-Marmont-small-shoulder-bag.jpg"
                     alt="" style="width: 100%; height: 300px;">
-                <h5>GG Marmont small shoulder <br> bag
-                </h5>
+                <h5>GG Marmont small shoulder <br> bag</h5>
                 <br>
                 <center>
                     <span><del>$1,950.00</del> <b>$1,560.00</b></span>
                     <br><br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('GG Marmont small shoulder bag', 1560.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
             <div class="card">
@@ -183,7 +191,7 @@
                     <span><del>$2,490.00</del> <b>$1,992.00</b></span>
                     <br>
                     <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('GG Emblem large tote bag', 1992.00)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
         </div>

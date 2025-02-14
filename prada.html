@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+15&family=Kavivanar&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Sixtyfour+Convergence&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
@@ -73,37 +74,47 @@
                 alt="" style="width: 100%;">
         </div>
         <br>
-        <div class="cart-container">
+        <div class="cart-container" onclick="viewCart()">
             <div class="cart-icon">
                 <span id="cart-count">0</span>
                 <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
-        <div class="row">
+        <div id="cart-page" class="cart-page" style="display: none;">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="empty-cart" id="empty-message" style="display: none;">
+                <p>Your cart is empty</p>
+                <button class="btn" onclick="continueShopping()">Continue Shopping</button>
+            </div>
+            <button class="btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+
+        <div class="products">
             <div class="card">
                 <h3>15% off</h3>
                 <img src="Prada.png" alt="" style="width:100%; height: 300px;">
-                <H5>Prada Wallet</H5> 
+                <H5>Prada Wallet</H5>
                 <br>
                 <center>
                     <span><del>£1,950.30</del> <b>£1,657.755</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
-            </center>
+                    <button onclick="addToCart('Prada Wallet', 1657.755)">ADD TO SHOPPING BAG</button>
+                </center>
             </div>
             <div class="card">
                 <h3>15% off</h3>
-                <img src="prada_1.png" alt=""style="width:100%; height: 300px;"> 
-                <H5>Leather Wallet with Chain</H5> 
+                <img src="prada_1.png" alt="" style="width:100%; height: 300px;">
+                <H5>Leather Wallet with Chain</H5>
                 <br>
                 <center>
                     <span><del>£1,871.50</del> <b>£1,590.776</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('Leather Wallet with Chain', 1590.776)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
-            
-              <div class="card">
+
+            <div class="card">
                 <h3>15% off</h3>
                 <img src="prada_w.png" alt="" style="width:100%; height: 300px;">
                 <h5>Re-Nylon and leather wallet</h5>
@@ -111,8 +122,8 @@
                 <center>
                     <span><del>£738.80</del> <b>£625.43</b></span>
                     <br><br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
-            </center>
+                    <button onclick="addToCart('Re-Nylon and leather wallet', 625.43)">ADD TO SHOPPING BAG</button>
+                </center>
             </div>
             <div class="card">
                 <h3>15% off</h3>
@@ -123,12 +134,12 @@
                     <span><del>£506.30</del> <b>£430.355</b></span>
                     <br>
                     <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('Leather Smartphone Case', 430.355)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
         </div>
         <br><br>
-        <div class="row">
+        <div class="products">
             <div class="card">
                 <h3>15% off</h3>
                 <img src="https://statics-cdn-v2.fashionette.net/transform/883bdc3a-a893-45bb-a93d-97b041426687/A0223130-Prada-1?io=transform:extend,width:504,height:504,background:white&quality=100"
@@ -138,7 +149,7 @@
                 <center>
                     <span><del>£1,950.30</del> <b>£1,657.755</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('Prada Crossbody <br> Bag Black', 1657.755)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
             <div class="card">
@@ -150,33 +161,31 @@
                 <center>
                     <span><del>£1,871.50</del> <b>£1,590.776</b></span>
                     <br> <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('Prada Nappa Soft Mini <br> Bag Fiordaliso', 1590.776)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
 
             <div class="card">
                 <h3>15% off</h3>
-                <img src="fmpr.png"
-                    alt="" style="width:100%; height: 300px;">
+                <img src="fmpr.png" alt="" style="width:100%; height: 300px;">
                 <h5>Leather Pouch</h5>
                 <br>
                 <center>
                     <span><del>£738.80</del> <b>£625.43</b></span>
                     <br><br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('Leather Pouch', 625.43)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
             <div class="card">
                 <h3>15% off</h3>
-                <img src="fempr.png"
-                    alt="" style="width:100%; height: 300px;">
+                <img src="fempr.png" alt="" style="width:100%; height: 300px;">
                 <h5>Small Saffiano Leather Wallet</h5>
                 <br>
                 <center>
                     <span><del>£506.30</del> <b>£430.355</b></span>
                     <br>
                     <br>
-                    <button onclick="addToCart()">ADD TO SHOPPING BAG</button>
+                    <button onclick="addToCart('Small Saffiano Leather Wallet', 430.355)">ADD TO SHOPPING BAG</button>
                 </center>
             </div>
         </div>
