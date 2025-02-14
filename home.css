@@ -383,7 +383,7 @@ button:hover {
     color: white;
 }
 
-.products_section > a button {
+.products_section>a button {
     width: 20%;
     height: 40px;
     margin: 10px 0 0 40%;
@@ -397,7 +397,7 @@ button:hover {
     font-family: "Ubuntu";
 }
 
-.products_section > a button:hover {
+.products_section>a button:hover {
     transform: scale(0.9);
     background-color: white;
     color: black;
@@ -441,6 +441,23 @@ button:hover {
     color: #3498db;
 }
 
+.cart-page {
+    max-width: 600px;
+    margin: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.empty-cart {
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Utility Classes */
 .h-primary {
     font-size: 50px;
@@ -458,7 +475,7 @@ button:hover {
     text-align: center;
 }
 
-.h-extra{
+.h-extra {
     font-size: 35px;
     font-weight: 700;
     font-family: "Merriweather", serif;
