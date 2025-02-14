@@ -227,7 +227,7 @@ span b {
     color: green;
 }
 
-button {
+.product button, .card button {
     margin-bottom: 10px;
     width: 80%;
     height: 30px;
@@ -238,7 +238,11 @@ button {
     border-radius: 20px;
 }
 
-button:hover {
+.product button:hover {
+    transform: scale(0.9);
+}
+
+.card button:hover {
     transform: scale(0.9);
 }
 

@@ -6,9 +6,7 @@ function addToCart(name, price) {
 }
 
 function viewCart() {
-  document.getElementById("cart-page").style.display = "block";
-  document.getElementById("products").style.display = "none";
-  updateCartDisplay();
+  window.location.href = "cart.html";
 }
 
 function updateCartDisplay() {
@@ -41,4 +39,9 @@ function removeItem(index) {
 function continueShopping() {
   document.getElementById("cart-page").style.display = "none";
   document.getElementById("products").style.display = "block";
+}
+
+function checkout() {
+  document.getElementById("cart-page").style.display = "none";
+  document.getElementById("checkout-page").style.display = "block";
 }

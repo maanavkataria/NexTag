@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | NexTag</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .cart-page { max-width: 600px; margin: auto; }
+        .cart-item { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ccc; }
+        .empty-cart { text-align: center; margin-top: 20px; }
+        /* .btn { padding: 10px 15px; background: #3498db; color: white; border: none; cursor: pointer; } */
+    </style>
+</head>
+<body>
+    <h1 class="h-primary text-center">Shopping Cart</h1>
+    <div class="cart-page">
+        <div id="cart-items"></div>
+        <div class="empty-cart" id="empty-message" style="display: none;">
+            <p>Your cart is empty</p>
+            <button class="btn" onclick="continueShopping()" style="padding: 10px 15px; background: #3498db; color: white; border: none; cursor: pointer;">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function updateCartDisplay() {
+            let cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+
+            if (cart.length === 0) {
+                document.getElementById('empty-message').style.display = 'block';
+            } else {
+                document.getElementById('empty-message').style.display = 'none';
+                cart.forEach((item, index) => {
+                    let div = document.createElement('div');
+                    div.classList.add('cart-item');
+                    div.innerHTML = `${item.name} - <span><del>$${(item.price * 1.25).toFixed(2)}</del> <b>$${item.price.toFixed(2)}</b></span> 
+                    <button onclick="removeItem(${index})">Remove</button>`;
+                    cartItems.appendChild(div);
+                });
+            }
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+
+        function continueShopping() {
+            window.location.href = "catalog.html"; // Change to your product page
+        }
+
+        updateCartDisplay();
+    </script>
+</body>
+</html>
