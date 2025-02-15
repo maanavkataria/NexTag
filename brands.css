@@ -43,7 +43,7 @@ span b{
     font-weight: 20px;
     color: green;
 }
-button{
+.row .card button{
     margin-bottom: 10px;
     width: 80%;
     height: 30px;
@@ -53,6 +53,6 @@ button{
     border-radius: 20px;
  
 }
-button:hover {
+.row .card button:hover {
     transform: scale(0.9);
 }
