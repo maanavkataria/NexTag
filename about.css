@@ -270,7 +270,7 @@ h1, h2 {
 
 .team_member_img img {
    width: 100%;
-   height: auto;
+   height: 300px;
    border-radius: 50%;
 }
 
@@ -342,6 +342,7 @@ h1, h2 {
        font-size: 16px;
    }
 }
+
 .footer {
    background-color: #333;
    color: white;
