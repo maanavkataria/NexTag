@@ -7,11 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login | NexTag</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        html,
         body {
-            background-color: whitesmoke;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            min-height: 100vh;
+            /* Ensures full viewport height */
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center;
+            align-items: center; */
         }
 
         .login-container {
@@ -19,9 +32,14 @@
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin-left: 35%;
+            width: 100%;
+            max-width: 350px;
             text-align: center;
+            position: relative;
+            /* Changed from fixed */
+            z-index: 1000;
+            /* Keeps it above the footer */
+            margin: auto;
         }
 
         h2 {
@@ -33,7 +51,7 @@
         input {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 16px;
@@ -65,7 +83,39 @@
         }
 
         footer {
-            margin-top: 23.5%;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-top: 150px;
+        }
+
+        @media (max-width: 880px) {
+            .login-container {
+                width: 90%;
+                padding: 25px;
+                margin-top: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input,
+            button {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .forgot-password {
+                font-size: 12px;
+            }
+
+            footer {
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                margin-top: 150px;
+            }
         }
     </style>
 </head>
@@ -82,7 +132,7 @@
                         <span class="bar"></span>
                     </div>
                 </div>
-                
+
                 <nav class="nav">
                     <ul id="nav-links">
                         <li><a href="index.html">Home</a></li>
@@ -106,9 +156,9 @@
                             </div>
                         </li>
                     </ul>
-                    
+
                 </nav>
-                
+
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
                     <i class="fa fa-search"></i>

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register | NexTag</title>
     <link rel="stylesheet" href="home.css">
-    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
@@ -17,9 +19,9 @@
             background-color: white;
             padding: 40px;
             border-radius: 8px;
-            margin-left: 35%;
+            margin: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            width: 30%;
             text-align: center;
         }
 
@@ -66,8 +68,28 @@
         .login-link a:hover {
             text-decoration: underline;
         }
+
+        @media screen and (max-width: 1024px) {
+            .signup-container {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .signup-container {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .signup-container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
@@ -80,7 +102,7 @@
                         <span class="bar"></span>
                     </div>
                 </div>
-                
+
                 <nav class="nav">
                     <ul id="nav-links">
                         <li><a href="index.html">Home</a></li>
@@ -104,9 +126,9 @@
                             </div>
                         </li>
                     </ul>
-                    
+
                 </nav>
-                
+
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
                     <i class="fa fa-search"></i>
@@ -117,7 +139,7 @@
                 </div>
             </header>
         </div>
-        
+
         <br><br><br><br><br><br><br>
 
         <div class="signup-container">
@@ -125,12 +147,13 @@
 
             <!-- Sign Up Form -->
             <form id="signupForm" action="#" method="POST" onsubmit="return validateForm()">
-              
+
                 <input type="text" id="username" name="username" placeholder="Username" required>
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
                 <input type="password" id="password" name="password" placeholder="Password" required>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
-                
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
+                    required>
+
                 <button type="submit">Sign Up</button>
 
                 <p class="login-link">Already have an account? <a href="#">Login</a></p>
@@ -186,9 +209,9 @@
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
-        
+
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active'); 
+            navLinks.classList.toggle('active');
         });
     </script>
 
@@ -200,28 +223,28 @@
             let confirmPassword = document.getElementById("confirm-password").value;
             let successMessage = document.getElementById("successMessage");
             let errorMessage = document.getElementById("errorMessage");
-            
+
             if (password !== confirmPassword) {
                 errorMessage.style.display = "block";
                 errorMessage.innerHTML = "<h3>Error!</h3><p>Passwords do not match.</p>";
                 return false;
             }
-            
+
             // Store user data in Local Storage
             let user = { username, email, password };
             localStorage.setItem("user", JSON.stringify(user));
-            
+
             successMessage.style.display = "block";
             errorMessage.style.display = "none";
-            
+
             // Redirect to login.html after 2 seconds
             setTimeout(() => {
                 window.location.href = "login.html";
             }, 2000);
-            
+
             return false;
         }
     </script>
 </body>
-</html>
 
+</html>
