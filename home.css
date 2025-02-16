@@ -197,6 +197,7 @@ header {
 
 .banner .banner_img img {
     width: 100%;
+    height: 500px;
 }
 
 .products_section,
