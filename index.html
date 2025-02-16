@@ -10,6 +10,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+15&family=Kavivanar&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Sixtyfour+Convergence&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+.brand_logo {
+    flex: 1 1 20%; 
+    box-sizing: border-box; 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; 
+}
+
+.brand_logo img {
+    width: 100%;
+    height: auto;
+    display: block; 
+    object-fit: contain;
+}
+
+.brand_logo:hover {
+    transform: scale(1.05);
+}
+
+.brand_logos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .brand_logo {
+        flex: 1 1 45%; 
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .brand_logo {
+        flex: 1 1 90%; 
+    }
+}
+
+    </style>
 </head>
 
 <body>
@@ -135,6 +175,7 @@
                     </center>
                 </div>
                 <div class="card">
+                    
                     <img src="https://www.louisvuitton.com/images/is/image/lv/M61695_PM2_Front%20view.png?wid=490&hei=490"
                         alt="" style="width: auto; height: 300px;">
                     <H5>M62294
@@ -211,7 +252,7 @@
                 </div>
                 <div class="brand_logo">
                     <img src="https://download.logo.wine/logo/Gucci/Gucci-Logo.wine.png" alt="gucci"
-                        style="width: 100%; height: 100%">
+                        style="width: 80%; height: 100%">
                 </div>
                 <div class="brand_logo">
                     <img src="https://logodix.com/logo/6443.png" alt="prada" style="width: 100%; height: 100%">
