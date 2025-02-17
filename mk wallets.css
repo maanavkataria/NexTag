@@ -132,74 +132,6 @@ header {
 .login-register button:hover {
     background-color: #777;
 }
-.cart-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.cart-container:hover {
-    transform: translateY(-10px);
-}
-
-.cart-icon {
-    position: relative;
-    font-size: 24px;
-}
-
-.cart-icon span {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: #e74c3c;
-    color: white;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 14px;
-}
-
-.fas.fa-shopping-cart {
-    font-size: 30px;
-    color: #3498db;
-}
-
-.cart-page {
-    max-width: 600px;
-    margin: auto;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.empty-cart {
-    text-align: center;
-    margin-top: 20px;
-}
-.product-container div class="cart-container" onclick="viewCart()">
-                <div class="cart-icon">
-                    <span id="cart-count">0</span>
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-            <div id="cart-page" class="cart-page" style="display: none;">
-                <h2>Shopping Cart</h2>
-                <div id="cart-items"></div>
-                <div class="empty-cart" id="empty-message" style="display: none;">
-                    <p>Your cart is empty</p>
-                    <button class="btn" onclick="continueShopping()">Continue Shopping</button>
-                </div>
-                <button class="btn" onclick="checkout()">Proceed to Checkout</button>
-            </div>
 
 @media screen and (max-width: 768px) {
     header {
@@ -302,7 +234,7 @@ header {
 .social-icons {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .social-icons a {
@@ -363,18 +295,17 @@ header {
     }
 }
 
+
 .product-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start; 
+    align-items: center;
     margin: 50px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    flex-wrap: wrap;
 }
-
 .offer-banner {
     background-color: brown;
     color: whitesmoke;
@@ -383,18 +314,17 @@ header {
     font-size: 18px;
     font-weight: bold;
     position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 10;
-    margin-bottom: 20px;
 }
 
 .product-image img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 500px;
+    height: 500px;
     border-radius: 8px;
-    margin-bottom: 20px; 
 }
-
 .rating {
     display: flex;
     justify-content: center;
@@ -402,22 +332,22 @@ header {
 
 .star {
     font-size: 50px;
-    color: #ddd;
+    color: #ddd; 
     cursor: pointer;
     transition: color 0.2s ease-in-out;
 }
 
 input[type="radio"] {
-    display: none;
+    display: none; 
 }
 
 input[type="radio"]:checked ~ .star {
-    color: #FFD700;
+    color: #FFD700; 
 }
 
 input[type="radio"]:hover ~ .star,
 input[type="radio"]:checked:hover ~ .star {
-    color: #FFCC00;
+    color: #FFCC00; 
 }
 
 input[type="radio"]:checked ~ .star:hover {
@@ -428,12 +358,11 @@ input[type="radio"]:not(:checked) ~ .star:hover {
     color: #FFCC00;
 }
 
+input[type="radio"]:checked + label ~ .star {
+    color: #FFD700; 
+}
 .product-details {
     padding-left: 30px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .product-details h1 {
@@ -459,8 +388,7 @@ input[type="radio"]:not(:checked) ~ .star:hover {
     font-weight: bold;
     color: #e74c3c;
 }
-
-.add-to-cart-btn, .buy-now {
+.add-to-cart-btn {
     background-color: #3498db;
     color: white;
     padding: 12px 25px;
@@ -468,61 +396,29 @@ input[type="radio"]:not(:checked) ~ .star:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px; 
-    width: 100%; 
 }
 
-.add-to-cart-btn:hover, .buy-now:hover {
+.add-to-cart-btn:hover {
     background-color: #2980b9;
 }
 
-.add-to-cart-btn:active, .buy-now:active {
+.add-to-cart-btn:active {
     background-color: #1f6f8c;
 }
-
-
-@media only screen and (max-width: 768px) {
-    .product-container {
-        margin: 20px; 
-        flex-direction: column; 
-        align-items: center; 
-    }
-    
-    .product-image img {
-        max-width: 80%;
-        height: auto;
-    }
-
-    .product-details {
-        padding-left: 0;
-        padding-top: 20px;
-        text-align: center; 
-    }
-
-    .add-to-cart-btn, .buy-now {
-        width: 80%;
-    }
+.buy-now {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-@media only screen and (max-width: 480px) {
-    .product-container {
-        margin: 10px; 
-        padding: 15px; 
-        flex-direction: column;
-        align-items: center; 
-    }
+.buy-now :hover {
+    background-color: #2980b9;
+}
 
-    .product-image img {
-        max-width: 100%; 
-        height: auto;
-    }
-
-    .product-details {
-        padding-left: 0;
-        text-align: center; 
-    }
-
-    .add-to-cart-btn, .buy-now {
-        width: 90%; 
-    }
+.buy-now :active {
+    background-color: #1f6f8c;
 }
