@@ -15,10 +15,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow elements to wrap on small screens */
+    flex-wrap: wrap; 
 }
 
-/* Logo styles */
 .logo h4 {
     color: white;
     font-size: 24px;
@@ -26,15 +25,14 @@ header {
     flex: 1;
 }
 
-/* Hamburger menu styles - moved to right */
 .menu-toggle {
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
-    position: absolute;  /* Position it anywhere on the screen */
-    right: 20px;         /* Move it to the right */
-    top: 20px;           /* Keep it aligned to the top */
+    position: absolute;  
+    right: 20px;      
+    top: 20px;          
 }
 
 .menu-toggle .bar {
@@ -43,9 +41,6 @@ header {
     background-color: white;
 }
 
-/* .nav {
-    flex: 2;
-} */
 
 .nav ul {
     list-style: none;
@@ -56,7 +51,7 @@ header {
 }
 
 .nav ul li {
-    margin: 0 10px; /* Reduced the margin to reduce the gap */
+    margin: 0 10px; 
 }
 
 .nav ul li a {
@@ -123,7 +118,6 @@ i{
     height: auto;
 }
 
-/* Login and Register buttons */
 .login-register {
     display: flex;
     gap: 15px;
@@ -198,9 +192,9 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
 h1.h-primary {
     font-size: 36px;
     font-weight: bold;
@@ -214,26 +208,29 @@ h2.h-secondary {
     color: #333;
 }
 
-/* Contact Section */
 .contact {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1000px; 
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
 }
 
 .contact-content {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+    box-sizing: border-box;
 }
 
-/* Contact Form */
 .contact-form {
-    flex: 1;
-    min-width: 300px;
+    flex: 1 1 100%;
+    max-width: 100%; 
+    box-sizing: border-box;
 }
 
 .contact-form .form-group {
@@ -248,11 +245,12 @@ h2.h-secondary {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 100%; 
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .contact-form textarea {
@@ -269,6 +267,7 @@ h2.h-secondary {
     cursor: pointer;
     font-size: 16px;
     width: 100%;
+    transition: background-color 0.3s;
 }
 
 .contact-form .btn-submit:hover {
@@ -276,8 +275,9 @@ h2.h-secondary {
 }
 
 .contact-info {
-    flex: 1;
-    min-width: 300px;
+    flex: 1 1 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .info-item {
@@ -315,25 +315,57 @@ h2.h-secondary {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 768px) {
-    .contact-content {
-        flex-direction: column;
+@media screen and (max-width: 1024px) {
+    .contact {
+        padding: 20px;
     }
 
-    .contact-info,
-    .contact-form {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
+    .contact-content {
+        gap: 10px;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    h1.h-primary {
+        font-size: 30px;
+    }
+
+    .contact-form .btn-submit {
+        font-size: 15px;
+    }
+
+    .contact-info {
+        margin-top: 20px; 
     }
 }
 
 @media screen and (max-width: 480px) {
     h1.h-primary {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .contact-form input,
     .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form .btn-submit {
         font-size: 14px;
     }
 }
@@ -413,8 +445,6 @@ h2.h-secondary {
     color: #ccc;
     font-size: 14px;
 }
-
-/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .footer-container {
         flex-direction: column;
