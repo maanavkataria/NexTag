@@ -1,197 +1,482 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | NexTag</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR57e_MjsCKYYivykuCgu9tXOYq4fKNYF4E9w&s">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jersey+15&family=Kavivanar&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Sixtyfour+Convergence&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
-    <div class="header">
-        <header>
-            <div class="logo">
-                <h4>NexTag</h4>
-                <div class="menu-toggle" id="menu-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
+body {
+    font-family: Arial, sans-serif;
+}
 
-            <nav class="nav">
-                <ul id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="dropdown">
-                        <a href="#">Categories</a>
-                        <div class="dropdown-content">
-                            <a href="male.html">Male</a>
-                            <a href="female.html">Female</a>
-                        </div>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="#">Shop By Brands</a>
-                        <div class="dropdown-content">
-                            <a href="lv.html">Louis Vitton</a>
-                            <a href="gucci.html">Gucci</a>
-                            <a href="prada.html">Prada</a>
-                            <a href="michael_kors.html">Michael Kors</a>
-                            <a href="balenciaga.html">Balenciaga</a>
-                        </div>
-                    </li>
-                </ul>
+header {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
 
-            </nav>
+.logo h4 {
+    color: white;
+    font-size: 24px;
+    margin-right: 20px;
+    flex: 1;
+}
 
-            <div class="search-bar">
-                <input type="text" placeholder="Search">
-                <i class="fa fa-search"></i>
-            </div>
-            <div class="login-register">
-                <a href="login.html"><button>Login</button></a>
-                <a href="register.html"><button>Register</button></a>
-            </div>
-        </header>
-    </div>
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;  
+    right: 20px;      
+    top: 20px;          
+}
 
-    <body>
-        <div class="contact">
-            <h1 class="h-primary text-center">Contact Us</h1>
-            <hr><br>
-            <div class="contact-content">
-                <div class="contact-form">
-                    <h2 class="h-secondary">Get in Touch</h2>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number:</label>
-                            <input type="text" id="phone" placeholder="Your Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message:</label>
-                            <textarea id="message" placeholder="Write a Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Send Message</button>
-                    </form>
-                </div>
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
 
-                <!-- Contact Info -->
-                <div class="contact-info">
-                    <h2 class="h-secondary">Contact Details</h2>
-                    <div class="info-item">
-                        <i class="fa fa-phone"></i>
-                        <div>
-                            <span>Phone:</span>
-                            <p>+92 313 7248497 | +92 343 2973846 | +92 345 7691947 | +92 324 9274478</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa fa-envelope"></i>
-                        <div>
-                            <span>Email:</span>
-                            <p>maanavkataria@gmail.com | khaliltaha116@gmail.com | asfardhamyal20@gmail.com |
-                                opicarlo4456@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa fa-linkedin"></i>
-                        <div>
-                            <span>LinkedIn:</span>
-                            <p><a href="https://www.linkedin.com/in/maanavkataria/">Maanav Kataria</a> | <a
-                                    href="https://www.linkedin.com/in/taha-khalil-174578327">Taha Khalil</a> | <a
-                                    href="https://www.linkedin.com/in/asfar-dhamyal-a21657327">Asfar Aziz</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa fa-facebook-official"></i>
-                        <div>
-                            <span>Facebook:</span>
-                            <p><a href="https://www.facebook.com/maanav.mukesh.kataria/">Maanav Mukesh Kataria</a> | <a
-                                    href="https://www.facebook.com/18T9jdDrWY/">Taha Khalil</a> | <a
-                                    href="https://www.facebook.com/share/19obpYAwM1/?mibextid=wwXIfr">Asfar Aziz</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa fa-instagram"></i>
-                        <div>
-                            <span>Instagram:</span>
-                            <p><a href="https://www.instagram.com/maanav.mukesh.kataria/">Maanav Mukesh Kataria</a> | <a
-                                    href="https://www.instagram.com/tahamagsi14/">Taha Khalil</a> | <a
-                                    href="https://www.instagram.com/_asfar_dhamyal_">Asfar Aziz</a> | <a
-                                    href="https://www.instagram.com/ch_arslan_897">Arsalan Ahmed</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fa fa-map-pin"></i>
-                        <div>
-                            <span>Address:</span>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12176.623297273707!2d67.07494615810577!3d24.859348892726253!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ea3db108f41%3A0x42acc4507358b160!2sAptech%20Learning%2C%20Shahrah%20e%20Faisal%20Center!5e0!3m2!1sen!2sus!4v1739623855031!5m2!1sen!2sus"
-                                width="235" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3>Our Policies</h3>
-                    <ul>
-                        <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                        <li><a href="return_policy.html">Return Policy</a></li>
-                        <li><a href="shipping_policy.html">Shipping Policy</a></li>
-                        <li><a href="terms_of_services.html">Terms Of Services</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li>Phone: +92 313 7248497</li>
-                        <li>Email: khaliltaha116@gmail.com</li>
-                        <li>Address: 30-A, Progressive Center, Karachi, Pakistan</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/maanav.mukesh.kataria"><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/tahamagsi14"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/maanavkataria"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 NexTag. All rights reserved.</p>
-            </div>
-        </footer>
-        
-        <script>
-            const menuToggle = document.getElementById('menu-toggle');
-            const navLinks = document.getElementById('nav-links');
-            
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active'); 
-            });
-        </script>
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
 
-        <script src="script.js"></script>
+.nav ul li {
+    margin: 0 10px; 
+}
 
-    </body>
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
 
-</html>
+.nav ul li a:hover {
+    background-color: #555;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+ }
+ 
+ .search-bar input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+ }
+ 
+ .search-bar i {
+    color: white;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+ }
+i{
+    width: auto;
+    height: auto;
+}
+
+.login-register {
+    display: flex;
+    gap: 15px;
+}
+
+.login-register button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-register button:hover {
+    background-color: #777;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav ul.active {
+        display: block;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .login-register {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .login-register button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1.h-primary {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2.h-secondary {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact {
+    width: 100%;
+    max-width: 1000px; 
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+    box-sizing: border-box;
+}
+
+.contact-form {
+    flex: 1 1 100%;
+    max-width: 100%; 
+    box-sizing: border-box;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.contact-form .btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    flex: 1 1 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.info-item div {
+    flex: 1;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-item p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.info-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact {
+        padding: 20px;
+    }
+
+    .contact-content {
+        gap: 10px;
+    }
+
+    .contact-form,
+    .contact-info {
+        flex: 1 1 100%; 
+        max-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    h1.h-primary {
+        font-size: 30px;
+    }
+
+    .contact-form .btn-submit {
+        font-size: 15px;
+    }
+
+    .contact-info {
+        margin-top: 20px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1.h-primary {
+        font-size: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+
+    .contact-form .btn-submit {
+        font-size: 14px;
+    }
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ccc;
+    font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-section h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
