@@ -197,14 +197,14 @@ header {
 
 .products {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px; 
 }
 
 .products .card {
     height: auto;
-    width: 22%;
+    width: 20%;
     box-shadow: 0px 0px 10px 0px;
     transition: transform 0.3s ease;
     margin-bottom: 20px;
