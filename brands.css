@@ -1,12 +1,16 @@
-.row{
+     
+.row {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap; 
 }
-.slider{
+
+.slider {
     width: 100%;
     height: auto;
 }
-.row .card{
+
+.row .card {
     height: auto;
     width: 20%;
     box-shadow: 0px 0px 10px 0px;
@@ -14,36 +18,41 @@
     margin-bottom: 20px;
     border-radius: 20px;
 }
-.card:hover{
-    transform: scale(0.5);
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2); 
-      
+
+.card:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2);
 }
-h3{
+
+h3 {
     color: red;
     font-size: 30px;
     text-align: center;
     margin-top: 20px;
 }
-h5{
+
+h5 {
     text-align: center;
-    font-size:20px;
+    font-size: 20px;
 }
-.card h4{
+
+.card h4 {
     text-align: center;
     color: green;
 }
-del{
+
+del {
     text-align: center;
     color: grey;
 }
-span b{
+
+span b {
     font-size: 22px;
-    font-weight: 20px;
+    font-weight: 700; 
     color: green;
 }
-.row .card button{
+
+.row .card button {
     margin-bottom: 10px;
     width: 80%;
     height: 30px;
@@ -51,8 +60,50 @@ span b{
     background-color: black;
     transition: transform 1s ease;
     border-radius: 20px;
- 
 }
+
 .row .card button:hover {
     transform: scale(0.9);
+}
+
+
+@media (max-width: 768px) {
+    .row .card {
+        width: 45%; 
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    span b {
+        font-size: 20px;
+    }
+
+    .row .card button {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .row .card {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .row .card button {
+        width: 100%; 
+    }
 }
